@@ -24,7 +24,8 @@ const compile = async () => {
   const es6Out = await swc.transform(code, es6Config);
   // change the module to commonjs
   es6Config.module.type = "commonjs";
-  const cjsOut = await swc.transform(code, es6Config);
+  const newCode = code + "\n module.exports = exports.default;"
+  const cjsOut = await swc.transform(newCode, es6Config);
 
   // write the compiled code in lib dir
   await writeFile("./lib/index.js", es6Out.code);
