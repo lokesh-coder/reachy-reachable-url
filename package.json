@@ -1,6 +1,6 @@
 {
   "name": "reachy-reachable-url",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Drop in replacement for reachable-url in deno env using reachy-url",
   "main": "lib/index.cjs",
   "module": "lib/index.js",

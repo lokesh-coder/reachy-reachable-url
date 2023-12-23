@@ -17,8 +17,5 @@ const isReachableUrl = (
 };
 
 export default isReachableUrl;
-
-const isReachableFunc = ({ statusCode }) => statusCode >= 200 && statusCode < 400
-
-export { isReachableFunc as isReachable }
+isReachableUrl.isReachable = ({ statusCode }) => statusCode >= 200 && statusCode < 400
 

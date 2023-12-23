@@ -1,6 +1,8 @@
 import app from "./setupServer";
-import isReachableUrl, { isReachable } from "../index";
+import isReachableUrl from "../index";
 import { beforeAll, expect, test } from "vitest";
+
+const isReachable = isReachableUrl.isReachable;
 
 const makeURL = (path: string) => {
   return isReachableUrl(`http://localhost/${path}`, 20, { port: 6969 });
